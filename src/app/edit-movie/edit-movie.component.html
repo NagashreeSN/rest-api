@@ -1,0 +1,49 @@
+<div class="container">
+    <form method="post">
+	
+      <div class="row">
+          <h2>Edit Movie</h2>
+        </div>
+        <div class="row">
+          <label >Title</label> 
+          <input class="form-control" type="text" name="mtitle" id="mtitle" [(ngModel)] = 'editResult.title'>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label >Box Office</label> <input
+              type="number"  name=boxOffice id="boxOffice" [(ngModel)] = 'editResult.boxOffice'>
+          </div>
+          <div class="col">
+            <label>Active</label> <br>
+            <div >
+              <input type="radio" name="active" id="active" value="Yes"> 
+                <label for="active">Yes</label>
+            </div>
+            <div>
+              <input type="radio" name="active" id="active" value="No"> 
+                <label for="active">No</label>
+            </div>
+          </div>
+          <div class="col">
+            <label>Genre</label> 
+            <select [(ngModel)] = 'editResult.genre' name="genre" id="genre">
+              <option value="Science fiction">Science Fiction</option>
+              <option value="Superhero">Superhero</option>
+              <option value="Romance">Romance</option>
+              <option value="Adventure">Adventure</option>
+              <option value="Thriller">Thriller</option>
+            </select>
+          </div>
+          <div class="col">
+            <label >Has Teaser</label> <br> 
+            <input type="checkbox" value="Yes" name="hasTeaser">Yes
+            <input type="checkbox" value="No" name="hasTeaser">No<br>
+          </div>
+         
+        </div>
+        <div class="row">
+         
+          <input value="Submit" type="submit" (click) = "editMovies()">
+        </div>
+    </form>
+

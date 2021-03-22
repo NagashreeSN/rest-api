@@ -1,0 +1,28 @@
+<div class="container">
+    <h2>Movies</h2>
+    <table>
+      <thead>
+        <th>Id</th>
+        <th>Title</th>
+        <th>Box Office</th>
+        <th>Active</th>
+        <th>Date of Launch</th>
+        <th>Genre</th>
+        <th>Teaser</th>
+        <th>Action</th>
+      </thead>
+      <tbody>
+        <tr *ngFor="let movie of movies">
+          <td>{{movie.movieId}}</td>
+          <td>{{movie.title}}</td>
+          <td>{{movie.boxOffice}}</td>
+          <td>{{movie.active}}</td>
+          <td>{{movie.date | date:'yyyy-MM-dd'}}</td>
+          <td>{{movie.genre}}</td>
+          <td>{{movie.hasTeaser}}</td>
+          <td><a  [routerLink]="['/editMovie', movie.movieId]"><button">Edit</button></a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
